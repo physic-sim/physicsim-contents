@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+
+// import images
+import logo from '../assets/logo.png'
+import ibLogo from '../assets/ib-logo.png'
+
+const year = new Date().getFullYear()
+---
+
+<style>
+    .footer-wrapper {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: small;
+        background-color: var(--alt-bg);
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .footer-container {
+        padding: 1em;
+    }
+
+    .footer-txt--emphasis {
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-link {
+        color: #fff;
+        transition: 250ms all;
+    }
+
+    .footer-link:hover {
+        color: #dbdbdb;
+    }
+
+    .footer-img--physicsim {
+        width: 100px;
+        height: auto;
+        margin: 0 1em 0 1em;
+    }
+
+    .footer-img--ib-logo {
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 1em 0 1em;
+    }
+</style>
+
+<footer class="footer-wrapper">
+    <div class="footer-container">
+        <p class="footer-txt--emphasis">
+            Copyright &copy {year} Isaac Barker.
+        </p>
+        <p class="footer-txt--light">
+            This site is developed as a side project by <a class="footer-link" href="https://www.isaacbarker.net">@isaacbarker</a>.<br>
+            Physicsim is a custom simulation library built on top of <a class="footer-link" href="https://p5js.org/">p5.js</a>. <br>
+            Found an issue? Email <a class="footer-link footer-txt--emphasis" href="mailto:developers@physicsim.co.uk">developers@physicsim.co.uk</a> <br>
+            <br>
+            <a class="footer-link" href="mailto:enquiries@physicsim.co.uk">enquiries@physicsim.co.uk</a> | <a class="footer-link" target="_blank" href="https://github.com/physic-sim">@physic-sim</a>
+        </p>
+    </div>   
+    <div class="footer-container">
+        <a href="/" class="footer-link"><Image class="footer-img--physicsim" src={logo} alt="Physicsim Logo"></a>
+        <a href="https://www.isaacbarker.net"target="_"><Image class="footer-img--ib-logo" src={ibLogo} alt="Isaac Barker Logo"></a>
+    </div>
+</footer>

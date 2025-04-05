@@ -1,0 +1,174 @@
+.simsearchWrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.simsearchContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100vw;
+}
+
+.simsearchFilters {
+    margin-top: 1em;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simsearchBtn {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: medium;
+    color: #fff;
+    margin: 0 .75em 0 .75em;
+    border: 2px solid var(--alt-green);
+    padding: .5em;
+    border-radius: 1em;
+    transition: background-color 250ms;
+    filter: drop-shadow(0px 0px 5px #00000088);
+}
+
+.simsearchBtn:hover {
+    background-color: var(--alt-green);
+}
+
+.simsearchClearBtn {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: medium;
+    text-decoration: underline;
+    color: #fff;
+    margin: 0 .75em 0 .75em;
+    padding: .5em;
+    border-radius: 1em;
+    transition: color 250ms;
+}
+
+.simsearchClearBtn:hover {
+    color: var(--off-ctrl-bg);
+}
+
+.simsearchInput {
+    outline: none;
+    padding: 1em;
+    width: 75%;
+    max-width: 720px;
+    border-radius: 1em;
+    border: 2px solid var(--alt-blue);
+    background-color: var(--main-bg);
+    color: #fff;
+    font-size: medium;
+}
+
+.simsearchInput::placeholder {
+    color: #8d8d8d;
+}
+
+.simsearchSims {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.simcardWrapper {
+    width: 90%;
+    max-width: 1080px;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid var(--alt-purple);
+    border-radius: 1em;
+    text-decoration: none;
+    color: #fff;
+    transition: all 250ms
+}
+
+.simcardWrapper:hover {
+    translate: 0 -5px;
+    background-color: var(--off-bg);
+}
+
+.simcardContainer {
+    padding-right: 1em;
+}
+
+.simcardTitle {
+    margin: 0;
+    padding: 0;
+    font-family: 'CMUSerifRoman';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.simcardTags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.simcardTag {
+    padding: .25em .75em .25em .75em;
+    margin: .25em 1em .25em 0em;
+    background-color: var(--alt-red);
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simcardImg{
+    height: 150px;
+    width: auto;
+    border-radius: .5em;
+}
+
+.simsearchNoResults {
+    margin-bottom: 1em;
+}
+
+.simsearchNoResults {
+    padding-bottom: 1.5em;
+}
+
+@media (max-width: 700px) {
+    .simcardWrapper {
+        flex-direction: column-reverse;
+        width: 75%;
+    }
+
+    .simcardContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0em 0em 0em 1em;
+    }
+
+    .simcardImg {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+}

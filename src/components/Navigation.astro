@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+// import images
+import logo from '../assets/logo.png'
+
+---
+
+<style>
+    .nav-wrapper {
+        width: 100vw;
+        background-color: var(--alt-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-container {
+        padding: .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-logo {
+        height: 60px;
+        width: auto;
+    }
+
+    .nav-description {
+        font-family: 'CMUSerifRoman';
+        font-weight: normal;
+        font-style: normal;
+        font-size: x-large;
+        text-align: center;
+    } 
+</style>
+
+<div class="nav-wrapper">
+    <div class="nav-container">
+        <a href="/">
+            <Image class="nav-logo" src={logo} alt="physicsim logo" loading="eager"/>
+        </a>    
+        <h1 class="nav-description">Physics Simulations for A-Level Concepts</h1>
+    </div>
+</div>
