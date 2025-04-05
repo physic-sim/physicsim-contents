@@ -19,12 +19,13 @@
 }
 
 .simsearchFilters {
-    margin-top: 1em;
+    padding: 1em;
     width: 100%;
     max-width: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .simsearchBtn {
@@ -33,7 +34,7 @@
     border: none;
     font-size: medium;
     color: #fff;
-    margin: 0 .75em 0 .75em;
+    margin: 0em .75em .5em .75em;
     border: 2px solid var(--alt-green);
     padding: .5em;
     border-radius: 1em;
