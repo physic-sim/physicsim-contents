@@ -25,7 +25,7 @@
     border-radius: 1em;
     border: 2px solid var(--alt-blue);
     background-color: var(--main-bg);
-    color: #fff;
+    color: var(--off-ctrl-bg);
     font-size: medium;
     box-sizing: border-box;
 }
@@ -68,7 +68,7 @@
     border: none;
     font-size: medium;
     text-decoration: underline;
-    color: #fff;
+    color: var(--off-ctrl-bg);
     padding: .5em;
     margin-top: .75em;
     border-radius: 1em;
