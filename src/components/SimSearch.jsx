@@ -27,11 +27,14 @@ export default function SimSearch() {
           onChange={(e) => { setQuery(e.target.value) }}
         />
         <div className={styles.simsearchFilters}>
-          <button className={styles.simsearchBtn} onClick={() => setQuery('mechanics')}>Mechanics</button>
-          <button className={styles.simsearchBtn} onClick={() => setQuery('waves')}>Waves</button>
-          <button className={styles.simsearchBtn} onClick={() => setQuery('particle')}>Particle</button>
-          <button className={styles.simsearchClearBtn} onClick={() => setQuery('')}>Clear</button>
+          <div className={styles.simsearchFiltersContainer}>
+            <button className={styles.simsearchBtn} onClick={() => setQuery('mechanics')}>Mechanics</button>
+            <button className={styles.simsearchBtn} onClick={() => setQuery('waves')}>Waves</button>
+            <button className={styles.simsearchBtn} onClick={() => setQuery('particle')}>Particle</button>
+          </div>
+          <button className={styles.simsearchClearBtn} onClick={() => setQuery('')}>Clear Search</button>
         </div>
+        <p className={styles.simsearchNoResults}>Showing {filtered.length} result(s).</p>
       </div>
       <div className={styles.simsearchSims}>
         {filtered.map((sim, idx) => {
@@ -50,7 +53,6 @@ export default function SimSearch() {
             </a>
           )
         })}
-        <p className={styles.simsearchNoResults}>Showing {filtered.length} results.</p>
       </div>
     </div>
   )

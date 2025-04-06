@@ -5,6 +5,8 @@ import Footer from "../components/Footer.astro"
 
 // import styling
 import '../styles/global.css'
+
+const { title } = Astro.props
 ---
 
 <html lang="en">
@@ -34,7 +36,7 @@ import '../styles/global.css'
 		<title>Physicsim</title>
 	</head>
 	<body>
-        <Navigation/>
+        <Navigation title={title}/>
         <slot/>
         <Footer/>
     </body>

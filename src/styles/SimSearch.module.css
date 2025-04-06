@@ -12,55 +12,9 @@
 .simsearchContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 1em;
     width: 100vw;
-}
-
-.simsearchFilters {
-    padding: 1em;
-    width: 100%;
-    max-width: 720px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.simsearchBtn {
-    background: none;
-    outline: none;
-    border: none;
-    font-size: medium;
-    color: #fff;
-    margin: 0em .75em .5em .75em;
-    border: 2px solid var(--alt-green);
-    padding: .5em;
-    border-radius: 1em;
-    transition: background-color 250ms;
-    filter: drop-shadow(0px 0px 5px #00000088);
-}
-
-.simsearchBtn:hover {
-    background-color: var(--alt-green);
-}
-
-.simsearchClearBtn {
-    background: none;
-    outline: none;
-    border: none;
-    font-size: medium;
-    text-decoration: underline;
-    color: #fff;
-    margin: 0 .75em 0 .75em;
-    padding: .5em;
-    border-radius: 1em;
-    transition: color 250ms;
-}
-
-.simsearchClearBtn:hover {
-    color: var(--off-ctrl-bg);
 }
 
 .simsearchInput {
@@ -73,10 +27,56 @@
     background-color: var(--main-bg);
     color: #fff;
     font-size: medium;
+    box-sizing: border-box;
 }
 
 .simsearchInput::placeholder {
     color: #8d8d8d;
+}
+
+.simsearchFilters {
+    width: 75%;
+    max-width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.simsearchBtn {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: medium;
+    color: #fff;
+    border: 2px solid var(--alt-green);
+    padding: .5em;
+    margin-right: .5em;
+    margin-top: .75em;
+    border-radius: 1em;
+    transition: background-color 250ms;
+    filter: drop-shadow(0px 0px 5px #00000088);
+}
+
+.simsearchBtn:hover {
+    background-color: #a6bd6f5f;
+}
+
+.simsearchClearBtn {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: medium;
+    text-decoration: underline;
+    color: #fff;
+    padding: .5em;
+    margin-top: .75em;
+    border-radius: 1em;
+    transition: color 250ms;
+}
+
+.simsearchClearBtn:hover {
+    color: #dcdcdc;
 }
 
 .simsearchSims {
@@ -101,7 +101,7 @@
     border-radius: 1em;
     text-decoration: none;
     color: #fff;
-    transition: all 250ms
+    transition: all 250ms;
 }
 
 .simcardWrapper:hover {
@@ -144,11 +144,11 @@
 }
 
 .simsearchNoResults {
-    margin-bottom: 1em;
-}
-
-.simsearchNoResults {
-    padding-bottom: 1.5em;
+    margin: 0;
+    padding: .5em;
+    font-family: 'CMUSerifRoman';
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media (max-width: 700px) {
@@ -164,6 +164,11 @@
         align-items: flex-start;
         justify-content: flex-start;
         padding: 0em 0em 0em 1em;
+    }
+
+    .simsearchFilters {
+        justify-content: center;
+        align-items: center;
     }
 
     .simcardImg {

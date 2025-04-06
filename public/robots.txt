@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cdn-cgi/*
+
+Sitemap: https://www.physicsim.co.uk/sitemap.xml

@@ -4,6 +4,8 @@ import { Image } from "astro:assets";
 // import images
 import logo from '../assets/logo.png'
 
+const { title } = Astro.props
+
 ---
 
 <style>
@@ -43,6 +45,6 @@ import logo from '../assets/logo.png'
         <a href="/">
             <Image class="nav-logo" src={logo} alt="physicsim logo" loading="eager"/>
         </a>    
-        <h1 class="nav-description">Physics Simulations for A-Level Concepts</h1>
+        <h1 class="nav-description">{title}</h1>
     </div>
 </div>

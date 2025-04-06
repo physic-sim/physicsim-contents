@@ -6,6 +6,6 @@ import Base from '../layouts/Base.astro'
 import SimSearch from '../components/SimSearch'
 ---
 
-<Base>
-	<SimSearch client:load/>
+<Base title="Physics Simulations for A-Level Concepts">
+	<SimSearch client:only="react"/>
 </Base>
